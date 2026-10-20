@@ -23,7 +23,7 @@ public class LatihanBiayaKursus {
                 inputValid = true; // Jika sukses melewati baris di atas, perulangan berhenti
             } catch (Exception e) {
                 System.out.println("[ERROR] Input harus berupa angka tanpa titik/koma! Coba lagi.");
-                input.nextLine(); // Membersihkan sisa input yang salah dari memori buffer
+                input.nextLine();
             }
         }
         

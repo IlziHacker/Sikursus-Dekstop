@@ -5,14 +5,18 @@ public class Orang {
     private String nama;
     private String noHp;
 
+<<<<<<< HEAD
     public Orang() {}
 
+=======
+>>>>>>> 6bd52ef41db6b42a8147c8d43d7f520e89ae3d0d
     public Orang(int id, String nama, String noHp) {
         setId(id);
         setNama(nama);
         setNoHp(noHp);
     }
 
+<<<<<<< HEAD
     public int getId() { return id; }
     public void setId(int id) {
         if (id < 0) throw new IllegalArgumentException("ID tidak boleh negatif");
@@ -27,6 +31,35 @@ public class Orang {
 
     public String getNoHp() { return noHp == null ? "" : noHp; }
     public void setNoHp(String noHp) {
+=======
+    public int getId() {
+        return id;
+    }
+
+    public final void setId(int id) {
+        if (id < 0) {
+            throw new IllegalArgumentException("ID tidak boleh negatif");
+        }
+        this.id = id;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public final void setNama(String nama) {
+        if (nama == null || nama.trim().isEmpty()) {
+            throw new IllegalArgumentException("Nama wajib diisi");
+        }
+        this.nama = nama.trim();
+    }
+
+    public String getNoHp() {
+        return noHp;
+    }
+
+    public final void setNoHp(String noHp) {
+>>>>>>> 6bd52ef41db6b42a8147c8d43d7f520e89ae3d0d
         String nilai = noHp == null ? "" : noHp.trim();
         if (!nilai.isEmpty() && !nilai.matches("[0-9+\\- ]{8,20}")) {
             throw new IllegalArgumentException("Format nomor HP tidak valid");

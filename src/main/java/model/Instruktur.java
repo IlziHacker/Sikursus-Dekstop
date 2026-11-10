@@ -1,5 +1,6 @@
 package model;
 
+<<<<<<< HEAD
 public class Instruktur extends Orang {
     private String keahlian;
     private String email;
@@ -29,10 +30,35 @@ public class Instruktur extends Orang {
             throw new IllegalArgumentException("Format email tidak valid");
         }
         this.email = value;
+=======
+
+public class Instruktur extends Orang {
+    private String keahlian;
+
+    public Instruktur(int id, String nama, String noHp, String keahlian) {
+        super(id, nama, noHp);
+        setKeahlian(keahlian);
+    }
+
+    public String getKeahlian() {
+        return keahlian;
+    }
+
+    public final void setKeahlian(String keahlian) {
+        if (keahlian == null || keahlian.trim().isEmpty()) {
+            throw new IllegalArgumentException("Keahlian wajib diisi");
+        }
+        this.keahlian = keahlian.trim();
+>>>>>>> 6bd52ef41db6b42a8147c8d43d7f520e89ae3d0d
     }
 
     @Override
     public String getInfo() {
+<<<<<<< HEAD
         return "INSTRUKTUR | " + super.getInfo() + " | Keahlian: " + getKeahlian();
+=======
+        return "INSTRUKTUR | " + super.getInfo()
+                + " | Keahlian: " + getKeahlian();
+>>>>>>> 6bd52ef41db6b42a8147c8d43d7f520e89ae3d0d
     }
 }
